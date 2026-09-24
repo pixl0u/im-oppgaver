@@ -28,7 +28,7 @@ gjen = sum / 5
 
 console.log(bestatt,'personer har bestått');
 console.log('gjennomsnitt poengene er', gjen);
-console.log('den høyeste poengsummen var',);
+console.log('den høyeste poengsummen var',besteElev.poeng);
 console.log(besteElev.navn,'hadde høyest poeng');
 console.log(versteElev.navn,'hadde lavest poeng');
 
