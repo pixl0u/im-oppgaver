@@ -1,0 +1,27 @@
+.box{
+    background-color: white;
+    border-radius: 50px;
+    width: 50%;
+}
+.box h1{
+    display: flex;
+    justify-content: baseline;
+}
+body{
+    background-color: rgb(233, 233, 233);
+}
+
+.nav{
+    background-color: white;
+    padding: 2%;
+    gap: 50px;
+}
+
+img{
+    width: 10%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
