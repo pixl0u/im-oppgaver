@@ -25,3 +25,12 @@ h1{
     display: flex;
     justify-content: center;
 }
+
+.gjem{
+    display: none;
+}
+
+.ting:hover + .gjem{
+    display: block;
+
+}
