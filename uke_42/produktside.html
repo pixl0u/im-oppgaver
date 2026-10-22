@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>produktside</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -11,10 +11,15 @@
     
     <div class="nav">
         <a href="index.html"><img src="" alt="" ></a>
-        
         <a href="produktside.html">Produktside</a>
         <a href="">login</a>
-        <a href="">handlekurv</a>
+        <div>
+        <button id="kurv" onclick="handle()"><img src="img/shopping-cart.png" alt="cart"></button>
+        
+        
+        <label for="hand">Ting:</label>
+        <input type="number" id="hand" name="hand" min="0" onclick="ti()">
+        </div>
     </div>
 
 <h1>Produkter</h1>
@@ -27,12 +32,15 @@
 </div>
 <div id="gjem">
 <p>pris: 599kr</p>
-<button>legg til handlekurv</button>
+<button id="handlekurv" onclick="ti()">legg til handlekurv</button>
 </div>
 </div>
 
 
+
+
 </div>
+<p id="text"></p>
 <script src="Prosjekt-nettbutikk.js"></script>
 </body>
 </html>
