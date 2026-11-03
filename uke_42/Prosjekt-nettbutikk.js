@@ -19,6 +19,26 @@ const produkter = [
     pris: 151,
     img: 'img/george-droyd.png'
 },
+{
+    navn:'ting2',
+    pris: 151,
+    img: 'img/george-droyd.png'
+},
+{
+    navn:'ting3',
+    pris: 151,
+    img: 'img/george-droyd.png'
+},
+{
+    navn:'ting4',
+    pris: 151,
+    img: 'img/george-droyd.png'
+},
+{
+    navn:'ting5',
+    pris: 151,
+    img: 'img/george-droyd.png'
+},
 ]
 a=1
 
@@ -30,20 +50,22 @@ for (produkt of produkter) {
 
         <h2>${produkt.navn}</h2> 
         
-        <p>${produkt.pris} kr</p> `;
+        <p>${produkt.pris} kr</p> 
+        <button id="handlekurv" onclick="ti()">legg til handlekurv</button>
+        `;
     a+=1;
 }
 
-goon.addEventListener("click", function() {
-    if (gjem.style.display == 'flex'){gjem.style.display = "none";}
-    else {gjem.style.display = "flex";}
-});
+// goon.addEventListener("click", function() {
+//     if (gjem.style.display == 'flex'){gjem.style.display = "none";}
+//     else {gjem.style.display = "flex";}
+// });
 
-goon.addEventListener("mouseleave", function() {
-    gjem.style.display = "none";
-    console.log(goon);
+// goon.addEventListener("mouseleave", function() {
+//     gjem.style.display = "none";
+//     console.log(goon);
     
-});
+// });
 
 hand.addEventListener('input', function() {
     ting1 = Number(hand.value);
