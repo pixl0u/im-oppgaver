@@ -2,7 +2,7 @@
     
     background-color: white;
     border-radius: 50px;
-    
+    transition: 0.2s;
 }
 
 body{
@@ -79,3 +79,10 @@ button{
 }
 
 
+#hand{
+    display: none;
+}
+
+#ding{
+    display: none;
+}
