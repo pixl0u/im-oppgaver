@@ -9,7 +9,7 @@ body{
     background-color: rgb(233, 233, 233);
 }
 
-.nav{
+nav{
     background-color: rgb(105, 101, 206);
     padding: 3%;
     gap: 50px;
@@ -34,9 +34,10 @@ h1{
     gap: 30px;
 }
 
-.nav a{
+nav a{
     color: white;
 }
+
 
 .box:hover{
     transform: scale(103%);
