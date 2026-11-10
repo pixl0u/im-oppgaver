@@ -104,6 +104,20 @@ for (produkt of produkter) {
 
 // prod.insertAdjacentHTML('beforeend',`<button>send</button>`)
 
+const sokefelt = document.getElementById("sokefelt");
+
+sokefelt.addEventListener("input", () => {
+let sok = sokefelt.value.toLowerCase();
+console.log(sok);
+
+        let resultat = produkter.filter(produkt =>
+
+        produkt.navn.toLowerCase().includes(sok)
+    
+        );
+console.log(resultat);
+});
+
 
 
 
