@@ -6,36 +6,36 @@ const prod = document.getElementById('prod')
 
 const produkter = [
 {
-    navn:'ting',
-    pris: 150,
-    img: 'img/george-droyd.png'
+    navn:'mus',
+    pris: 400,
+    img: 'img/mus.jpg'
 },
 
 {
-    navn:'ting1',
-    pris: 151,
-    img: 'img/george-droyd.png'
+    navn:'skjerm',
+    pris: 1300,
+    img: 'img/skjerm.jpg'
 },
 {
-    navn:'ting2',
-    pris: 151,
-    img: 'img/george-droyd.png'
+    navn:'mikrofon',
+    pris: 600,
+    img: 'img/mic.jpg'
 },
 {
-    navn:'ting3',
-    pris: 151,
-    img: 'img/george-droyd.png'
+    navn:'hodetelefoner',
+    pris: 350,
+    img: 'img/hode.jpg'
 },
 {
-    navn:'ting4',
-    pris: 151,
-    img: 'img/george-droyd.png'
+    navn:'keyboard',
+    pris: 750,
+    img: 'img/keyboard.jpg'
 },
 {
-    navn:'ting5',
-    pris: 151,
-    img: 'img/george-droyd.png'
-},
+    navn:'musematte',
+    pris: 100,
+    img: 'img/musematte.jpg'
+}
 ]
 let a=1
 let ting = [];
@@ -68,7 +68,7 @@ for (produkt of produkter) {
 
         <h2>${produkt.navn}</h2> 
         </div>
-        <div id="gjem${a}">
+        <div id="gjem${a}" class='gjem'>
         <p>${produkt.pris} kr</p> 
         <button id="handlekurv${a}" onclick="ti(${a})">legg til handlekurv</button>
         </div>
@@ -85,7 +85,11 @@ for (produkt of produkter) {
     
     });
 
-    
+    function visProdukter(liste) {
+
+        container.innerHTML = "";
+
+    }
     
     let nummers = a;
     hand[nummers].addEventListener('input', function() {
