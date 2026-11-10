@@ -98,19 +98,23 @@ for (produkt of produkter) {
 
 }
 
-function handle(nummeres){  
-    
-    if (ting[nummeres]>0){
-    
-    if (hand[nummeres].style.display === 'block') {
-        hand[nummeres].style.display = 'none'
-        ding[nummeres].style.display = 'none'
+// prod.insertAdjacentHTML('beforeend',`<button>send</button>`)
+
+
+
+
+
+let kurvApen = false;
+function handle() {
+    kurvApen = !kurvApen;
+
+    for (let i = 1; i < ting.length; i++) {
+        if (ting[i] > 0) {
+            hand[i].style.display = kurvApen ? 'block' : 'none';
+            ding[i].style.display = kurvApen ? 'block' : 'none';
+        }
     }
-    else {hand[nummeres].style.display = 'block'
-        ding[nummeres].style.display = 'block'
-    }
-    }
-    }  
+}
 
 
 function ti(nummer) {
@@ -121,9 +125,8 @@ function ti(nummer) {
     console.log(hand[nummer].value);
 }
 
-nav.insertAdjacentHTML('beforeend', `
-<button id="kurv" onclick="handle(${nummers})"><img src="img/shopping-cart.png" alt="cart"></button>`);
-
+// nav.innerHTML+=('beforeend', `
+// <button id="kurv" onclick="handle(${nummers})"><img src="img/shopping-cart.png" alt="cart"></button>`);
 
 
 
