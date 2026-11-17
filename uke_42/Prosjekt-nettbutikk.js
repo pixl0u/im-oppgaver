@@ -9,38 +9,44 @@ const produkter = [
     id: 1,
     navn:'mus',
     pris: 400,
-    img: 'img/mus.jpg'
+    img: 'img/mus.jpg',
+    kategori: 'mus'
 },
 
 {
     id: 2,
     navn:'skjerm',
     pris: 1300,
-    img: 'img/skjerm.jpg'
+    img: 'img/skjerm.jpg',
+    kategori: 'skjerm'
 },
 {
     id: 3,
     navn:'mikrofon',
     pris: 600,
-    img: 'img/mic.jpg'
+    img: 'img/mic.jpg',
+    kategori: 'h/m'
 },
 {
     id: 4,
     navn:'hodetelefoner',
     pris: 350,
-    img: 'img/hode.jpg'
+    img: 'img/hode.jpg',
+    kategori: 'h/m'
 },
 {
     id: 5,
     navn:'keyboard',
     pris: 750,
-    img: 'img/keyboard.jpg'
+    img: 'img/keyboard.jpg',
+    kategori: 'tastatur'
 },
 {
     id: 6,
     navn:'musematte',
     pris: 100,
-    img: 'img/musematte.jpg'
+    img: 'img/musematte.jpg',
+    kategori: 'mus'
 }
 ]
 let totalsum =0
@@ -167,6 +173,30 @@ console.log(sok);
         console.log(resultat);
 });
 
+const filterKnapper =document.querySelectorAll(".filterKnapp");
+
+filterKnapper.forEach(knapp => {
+    knapp.addEventListener("click", () => {
+    let kategori = knapp.dataset.kategori;
+    if (kategori === "alle") {
+        visProdukter(produkter);
+        console.log('aaaaaaa');
+        
+    }
+
+    else {
+    let filtrerteProdukter = produkter.filter(
+    produkt => produkt.kategori === kategori
+    );
+    visProdukter(filtrerteProdukter);
+
+}});
+
+});
+
+
+
+
 
 const skrift = document.getElementById('skrift')
 
@@ -177,10 +207,12 @@ function handle() {
         if (kurvApen == true){
             skrift.style.display ='none';
             totalpris.style.display ='none';
+            prod.style.display ='none';
         }
         else if (kurvApen == false){
             skrift.style.display ='block';
             totalpris.style.display ='block';
+            prod.style.display ='block';
         }
         if (ting[i] > 0) {
             if (kurvApen == true){
