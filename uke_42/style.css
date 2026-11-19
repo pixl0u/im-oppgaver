@@ -20,6 +20,7 @@ nav{
     justify-content: center;
     border-bottom-color: rgb(73, 70, 157);
     border-bottom-style: solid;
+    align-items: center;
 }
 
 img{
@@ -172,6 +173,7 @@ width: 10%;
 border-color: black;
 border-style: solid;
 border-radius: 25px;
+text-align: center;
 }
 
 #filterKnapper{
@@ -187,3 +189,32 @@ border-radius: 25px;
     height: 125px;
 }
 
+
+
+@media only screen and (max-width: 1200px) {
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    background-color: rgb(105, 101, 206);
+    padding: 3%;
+    gap: 10px;
+    margin-left: -1%;
+    margin-right: -1%;
+    margin-top: -1%;
+    justify-content: flex-start;
+    border-bottom-color: rgb(73, 70, 157);
+    border-bottom-style: solid;
+}
+
+button{
+    font-size: 50%;
+    padding: 2%;
+}
+
+}

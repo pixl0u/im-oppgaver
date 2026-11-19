@@ -68,7 +68,7 @@ for (produkt of liste) {
     produkt_cont.insertAdjacentHTML('beforeend', `
             <div id="box${produkt.id}" class="box">
                 <div class="produktkort">
-                    <div class="ting">
+                    <div class="ting" tabindex="0">
                         <img src="${produkt.img}" alt="${produkt.navn}">
                         <h2>${produkt.navn}</h2>
                     </div>
@@ -116,10 +116,13 @@ function regnTotal() {
 
 
 for (produkt of produkter){
+    
+    
 
     prod.insertAdjacentHTML('beforeend', `
     <label for="hand${produkt.id}" id="ding${produkt.id}">${produkt.navn}:</label>
     <input type="number" id="hand${produkt.id}" name="hand${produkt.id}" min="0">
+    <button id="slett">slett fra handlekurven</button>
     `);
     hand[produkt.id] = document.getElementById('hand'+produkt.id);
     ding[produkt.id] = document.getElementById('ding'+produkt.id);
@@ -131,6 +134,10 @@ for (produkt of produkter){
     ting[nummers] = Number(hand[nummers].value);
     console.log(ting[nummers]);
     regnTotal()
+
+    
+
+
     });
 }
 let kurvApen = true;
@@ -181,7 +188,6 @@ filterKnapper.forEach(knapp => {
     if (kategori === "alle") {
         visProdukter(produkter);
         console.log('aaaaaaa');
-        
     }
 
     else {
@@ -191,12 +197,7 @@ filterKnapper.forEach(knapp => {
     visProdukter(filtrerteProdukter);
 
 }});
-
 });
-
-
-
-
 
 const skrift = document.getElementById('skrift')
 
