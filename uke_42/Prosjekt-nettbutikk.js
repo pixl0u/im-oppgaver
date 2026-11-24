@@ -53,6 +53,7 @@ let totalsum =0
 let ting = [];
 let hand = [];
 let ding = [];
+let slett = [];
 
 for (let produkt of produkter) {
     ting[produkt.id] = 0;
@@ -92,8 +93,7 @@ for (produkt of liste) {
 
     goon.addEventListener("mouseleave", function() {
         gjem.style.display = "none";
-        console.log(goon);
-    
+
     });
 
 }
@@ -113,6 +113,15 @@ function regnTotal() {
         "Totalpris: " + total + " kr";
 }
 
+function slettt(produkts) {
+    console.log(produkts);
+        hand[produkts].value=0
+        console.log(hand[produkts].value);
+        ting[produkts]=0
+        hand[produkts].style.display = 'none'
+        ding[produkts].style.display = 'none'
+        slett[produkts].style.display = 'none'
+}
 
 
 for (produkt of produkter){
@@ -121,25 +130,32 @@ for (produkt of produkter){
 
     prod.insertAdjacentHTML('beforeend', `
     <label for="hand${produkt.id}" id="ding${produkt.id}">${produkt.navn}:</label>
+    <div class='k'>
     <input type="number" id="hand${produkt.id}" name="hand${produkt.id}" min="0">
-    <button id="slett">slett fra handlekurven</button>
+    <button id="slett${produkt.id}" onclick="slettt(${produkt.id})">slett fra handlekurven</button>
+    </div>
     `);
     hand[produkt.id] = document.getElementById('hand'+produkt.id);
     ding[produkt.id] = document.getElementById('ding'+produkt.id);
+    slett[produkt.id] = document.getElementById('slett'+produkt.id)
     hand[produkt.id].style.display = 'none'
     ding[produkt.id].style.display = 'none'
-
+    slett[produkt.id].style.display = 'none';
+    hand[produkt.id].style.width = '30%'
     let nummers = produkt.id;
     hand[nummers].addEventListener('input', function() {
     ting[nummers] = Number(hand[nummers].value);
     console.log(ting[nummers]);
     regnTotal()
-
+    
     
 
 
     });
 }
+
+
+
 let kurvApen = true;
 function ti(nummer) {
     ting[nummer]++;
@@ -151,12 +167,12 @@ function ti(nummer) {
             if (kurvApen == true){
             hand[nummer].style.display = 'none';
             ding[nummer].style.display = 'none';
-            
+            slett[nummer].style.display = 'none';
             }
             else if (kurvApen == false){
                 hand[nummer].style.display = 'block';
                 ding[nummer].style.display = 'block';
-            
+                slett[nummer].style.display = 'flex';
             }
         }
     regnTotal()
@@ -187,7 +203,7 @@ filterKnapper.forEach(knapp => {
     let kategori = knapp.dataset.kategori;
     if (kategori === "alle") {
         visProdukter(produkter);
-        console.log('aaaaaaa');
+        
     }
 
     else {
@@ -219,12 +235,12 @@ function handle() {
             if (kurvApen == true){
             hand[i].style.display = 'none';
             ding[i].style.display = 'none';
-            
+            slett[nummer].style.display = 'none';
             }
             else if (kurvApen == false){
                 hand[i].style.display = 'block';
                 ding[i].style.display = 'block';
-            
+                slett[nummer].style.display = 'flex';
             }
         }
     }
