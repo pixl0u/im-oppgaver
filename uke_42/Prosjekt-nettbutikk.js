@@ -121,6 +121,7 @@ function slettt(produkts) {
         hand[produkts].style.display = 'none'
         ding[produkts].style.display = 'none'
         slett[produkts].style.display = 'none'
+        regnTotal()
 }
 
 
@@ -235,12 +236,12 @@ function handle() {
             if (kurvApen == true){
             hand[i].style.display = 'none';
             ding[i].style.display = 'none';
-            slett[nummer].style.display = 'none';
+            slett[i].style.display = 'none';
             }
             else if (kurvApen == false){
                 hand[i].style.display = 'block';
                 ding[i].style.display = 'block';
-                slett[nummer].style.display = 'flex';
+                slett[i].style.display = 'flex';
             }
         }
     }

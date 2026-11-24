@@ -68,6 +68,10 @@ button{
     width: 50%;
 }
 
+button:active{
+    transform: scale(95%);
+    transition: 0.1s;
+}
 
 .grid {
     display: grid;
@@ -193,6 +197,8 @@ text-align: center;
     display: flex;
     gap: 3%;
 }
+
+
 
 @media only screen and (max-width: 1200px) {
     .grid {
