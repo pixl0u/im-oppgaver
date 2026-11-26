@@ -155,6 +155,31 @@ for (produkt of produkter){
     });
 }
 
+under = document.getElementById('under')
+over = document.getElementById('over')
+minv=under.value
+maxv=over.value
+under.addEventListener('input', function() {
+    if (under.value > over.value){
+        minv=over.value
+        maxv=under.value
+    }
+    else{
+        minv=under.value
+        maxv=over.value
+    }
+})
+
+over.addEventListener('input', function() {
+    if (under.value > over.value){
+        minv=over.value
+        maxv=under.value
+    }
+    else{
+        minv=under.value
+        maxv=over.value
+    }
+})
 
 
 let kurvApen = true;

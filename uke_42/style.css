@@ -56,6 +56,7 @@ a:hover{
 button:hover{
     transform: scale(105%);
     cursor: pointer;
+    transition: 0.1s;
 }
 
 button{
@@ -198,6 +199,46 @@ text-align: center;
     gap: 3%;
 }
 
+.drange{
+    position: relative;
+}
+.drange input[type='range']{
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    appearance: none;
+    background: rgb(105, 101, 206);
+    height: 6px;
+    border-radius: 50px;
+
+}
+.drange input[type=range]::-moz-range-thumb{
+    pointer-events: all;
+    background-color: rgb(105, 101, 206);
+    border-color: rgb(105, 101, 206);
+}
+.drange input[type=range]::-webkit-slider-thumb{
+    pointer-events: all;
+    background-color: rgb(105, 101, 206);
+    border-color: rgb(105, 101, 206);
+}
+.drange input[type=range]::-moz-range-track{
+    height: 6px;
+}
+.drange input[type=range]::-webkit-slider-runnable-track{
+    height: 6px;
+}
+.drange input[type=range]:focus{
+    outline: none;
+}
+
+
+.drange input[type=range]:first-child:-moz-range-track{
+    background: rgb(105, 101, 206);
+}
+.drange input[type=range]:first-child::-webkit-slider-runnable-track{
+    background: rgb(105, 101, 206);
+}
 
 
 @media only screen and (max-width: 1200px) {
